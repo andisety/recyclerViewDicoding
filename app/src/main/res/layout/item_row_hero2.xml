@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/tv_img_item"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            tools:src="@drawable/ahmad_dahlan"
+            android:maxWidth="80dp"
+            android:maxHeight="80dp"
+            android:adjustViewBounds="true"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:scaleType="fitXY"/>
+        <TextView
+            android:id="@+id/tv_item_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/tv_img_item"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/heroes_name"/>
+        <TextView
+            android:id="@+id/tv_item_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            app:layout_constraintTop_toBottomOf="@+id/tv_item_name"
+            app:layout_constraintStart_toEndOf="@+id/tv_img_item"
+            tools:text="@string/detail"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
