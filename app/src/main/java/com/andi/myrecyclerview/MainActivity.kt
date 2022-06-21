@@ -47,6 +47,11 @@ class MainActivity : AppCompatActivity() {
         val gridHeroAdapter = GridHeroAdapter(list)
         rvHeroes.adapter=gridHeroAdapter
     }
+    fun showRecycleCard(){
+        rvHeroes.layoutManager= LinearLayoutManager(this)
+        rvHeroes.adapter=CardHeroAdapter(list)
+
+    }
 
     private fun setMode(selectMenu:Int){
         when(selectMenu){
@@ -54,7 +59,7 @@ class MainActivity : AppCompatActivity() {
                 showRecyclerList()
             }
             R.id.card->{
-
+                showRecycleCard()
             }
             R.id.grid->{
                 showRecycleGrid()
